@@ -9,7 +9,7 @@ function Lista(){
 
     return(
         <>
-     <h1>Listas de todos Países</h1>   
+     <h1>Lista de todos Países</h1>   
      {dadosL.map((pais) => (
         <div key={pais.country}>
             <p className="p">Nome: {pais.country}</p>
