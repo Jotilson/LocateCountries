@@ -1,0 +1,16 @@
+
+body{background-color: rgb(21, 87, 209);}
+nav{
+  background-image: linear-gradient(to bottom, rgb(25, 117, 236), darkblue);
+
+  padding: 30px;
+  display: flex;
+ justify-content: space-evenly;
+flex-direction: row;
+align-items: center;
+}
+.a{
+color: rgb(255, 253, 252);
+text-decoration: none;
+font-weight: 900;
+}
