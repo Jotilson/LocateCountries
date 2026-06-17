@@ -3,14 +3,26 @@ div{
  background-color: rgb(21, 87, 209);
 }
 h1{ color: white;
-    margin-top: 50px;margin-bottom: 40px;}
+    margin-top: 50px;margin-bottom: 40px;font-weight: 800;font-size: xx-large;}
 .h1{color: red;}
  h3{
     color: white;
   margin-bottom: 40px;
 }
+h2{color: white; font-weight: 600;}
 .p{color: white;font-weight: 700;}
-.div{
+ol{columns: 2;
+    list-style:none;
+    text-align: justify;
+}
+ol li{
+    color: white;
+    font-size: 18px;
+}
+.divDetails{
+    display: block;margin: auto;
+}
+.div, .divFavorito{
    
     color: white;
     border-radius: 5px;
@@ -21,6 +33,32 @@ h1{ color: white;
     margin: auto;
 
 }
+.divR{
+  color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.divFavor{
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.divFavor:active{
+    background-color: lightblue;
+}
+
+
 img{width: 200px;}
 
 input{
@@ -37,9 +75,20 @@ button{
     font-weight: 700;
     border-radius: 5px;
     border: 2px solid white;
+    cursor: pointer;
 }
 
 button:hover{
     background-color: rgb(86, 127, 239);
     color: black;
+}
+.btnFavorito{
+    background-color: rgb(233, 121, 121);
+}
+.btnFavorito:hover{
+background-color: red;
+    color: white;
+}
+.btnFavorito:active{
+    background-color: rgb(52, 15, 15);
 }

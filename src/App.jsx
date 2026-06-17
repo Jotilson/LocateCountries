@@ -1,20 +1,11 @@
 import './App.css'
-import {Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import Lista from './pages/lista'
-import NavBar from './component/navBar'
-
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
  
   return (
     <>
-    <NavBar/>
-    <Routes>
-  <Route path='/home' element={<Home/>}/>
- <Route path='/lista' element={<Lista/>}/>
- 
-    </Routes>
+    <AppRoutes/>
     </>
   )
 }
