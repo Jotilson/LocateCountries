@@ -7,14 +7,19 @@ import './home.css'
 
 function Favorite(){
     const {paisFavorito}=useContext(FavoritoContext);
+
    const paises=JSON.parse(localStorage.getItem("FavoriteCountry")).flat()
    const naviget=useNavigate()
 
-    if(!paises.length){
+    if(!paises.length || paises.length===0){
         return <h1>Sem favoritos</h1>
     }
     
-     
+     function clearList(){
+        const his=[]
+        
+        localStorage.setItem("FavoriteCountry",JSON.stringify(his))
+     }
     return(
         <>
  
