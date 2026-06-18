@@ -13,7 +13,7 @@ function AppRoutes(){
   <Route path='/home' element={<Home/>}/>
   <Route path='/favorite' element={<Favorite/>}/>
  <Route path='/lista' element={<Lista/>}/>
-<Route path='/detalhes/:iso2' element={<Detalhes/>}/>
+<Route path='/detalhes/:country' element={<Detalhes/>}/>
  
     </Routes>
         </>

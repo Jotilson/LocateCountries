@@ -92,3 +92,19 @@ background-color: red;
 .btnFavorito:active{
     background-color: rgb(52, 15, 15);
 }
+
+.topo{
+    position: fixed;
+    top: 400px;
+}
+
+.Pick{
+    display: block;
+    margin: auto;
+}
+
+.BtnClear{
+    position: sticky;
+    bottom: 0
+    ;
+}

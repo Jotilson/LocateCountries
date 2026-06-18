@@ -1,19 +1,40 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { PaisContext } from "../context/paises";
+
 import './home.css'
+import { usePais } from "../Hooks/pais";
+import { FavoritoContext } from "../context/favoritoContext";
+import { BtnTopo } from "../Hooks/buttonTopo";
 
 function Lista(){
  const {dadosL}=useContext(PaisContext);
+  const [favor,setFavor]=useState("Favoritar") 
+  const [name,setName]=useState("")
+  const {pais,setPais}=usePais();
+  const {setPaisFavorito}=useContext(FavoritoContext)
+const navigate=useNavigate()
+
+  function favoritar(paes){
+   setPaisFavorito(pais);
+
+  const historico=JSON.parse(localStorage.getItem("FavoriteCountry")) || [];
+ historico.push(paes)
+ 
+  localStorage.setItem("FavoriteCountry",JSON.stringify(historico))
+  }
 
     return(
         <>
      <h1>Lista de todos Países</h1>   
-     {dadosL.map((pais) => (
-        <div key={pais.country} className="divR">
-            <p className="p">Nome: {pais.country}</p>
-            <img src={`https://flagsapi.com/${pais.iso2}/flat/64.png`} alt={`Bandeira de ${pais.country}`} />
+     {dadosL.map((paiss) => (
+        <div key={paiss.country} className="divR" >
+            <p className="p">Nome: {paiss.country}</p>
+            <img src={`https://flagsapi.com/${paiss.iso2}/flat/64.png`} alt={`Bandeira de ${paiss.country}`} />
+            <button className='btnFavorito' onClick={() => favoritar(paiss)}>{favor}</button>
         </div>
      ))}
+     <BtnTopo/>
         </>
     )
 }

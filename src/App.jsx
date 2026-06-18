@@ -10,4 +10,4 @@ function App() {
   )
 }
 
-export default AppRoutes
+export default App

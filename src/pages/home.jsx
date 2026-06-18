@@ -8,7 +8,7 @@ import { useErro } from '../Hooks/erro';
 import { usePesquisa } from '../Hooks/pesquisa';
 import { usePais } from '../Hooks/pais';
 import { FavoritoContext } from '../context/favoritoContext';
-
+import { BtnTopo } from '../Hooks/buttonTopo';
 
 function Home(){
   const {dados}=useContext(DadosContext)
@@ -79,6 +79,7 @@ function Home(){
           ))}
       </div>
      </section>
+     <BtnTopo/>
 
         </>
     )
