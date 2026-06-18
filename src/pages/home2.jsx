@@ -1,7 +1,22 @@
+import { useNavigate } from "react-router-dom"
 
 function Home2(){
+    
+const navigate=useNavigate()
 
-    return <h1>Localiza o seu país e veja mais informações</h1>;
+  const historico=JSON.parse(localStorage.getItem("FavoriteCountry"))
+
+  if(!historico){
+    localStorage.setItem("FavoriteCountry",JSON.stringify([]))
+  }
+    return (
+    <>
+    
+    <h1>Localiza o seu país e veja mais informações</h1>
+    <button className="btnH2" onClick={()=> navigate('/home')}>ENTRAR</button>
+</>
+
+    )
 }
 
 export default Home2

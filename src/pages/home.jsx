@@ -18,6 +18,7 @@ function Home(){
   const {pais,setPais}=usePais();
   const {setPaisFavorito}=useContext(FavoritoContext);
   const [favor,setFavor]=useState("Favoritar") 
+  
    function locatecountry(){
   setFavor("Favoritar")
     const filtrado=dados.filter((country)=>

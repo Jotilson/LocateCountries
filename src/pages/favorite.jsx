@@ -7,6 +7,11 @@ import './home.css'
 
 function Favorite(){
     const {paisFavorito}=useContext(FavoritoContext);
+    
+function clearList(){
+      localStorage.setItem("FavoriteCountry",JSON.stringify([]));
+      window.location.reload();
+     }
 
    const paises=JSON.parse(localStorage.getItem("FavoriteCountry")).flat()
    const naviget=useNavigate()
@@ -15,11 +20,6 @@ function Favorite(){
         return <h1>Sem favoritos</h1>
     }
     
-     function clearList(){
-        const his=[]
-        
-        localStorage.setItem("FavoriteCountry",JSON.stringify(his))
-     }
     return(
         <>
  
@@ -34,7 +34,7 @@ function Favorite(){
             </div>
 
         ))}
-        <button className="BtnClear">Limpar lista</button>
+    <button className="BtnClear" onClick={()=> clearList()}>Limpar lista</button>
 <BtnTopo/>
         </>
         
