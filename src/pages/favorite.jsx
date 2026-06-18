@@ -10,7 +10,7 @@ function Favorite(){
    const paises=JSON.parse(localStorage.getItem("FavoriteCountry")).flat()
    const naviget=useNavigate()
 
-    if(paises==""){
+    if(!paises.length){
         return <h1>Sem favoritos</h1>
     }
     
