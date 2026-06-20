@@ -26,7 +26,8 @@ function clearList(){
         <h1>Países Favoritos</h1>
  
         {paises.map((pais,index)=>(
-            <div key={index} className="divFavor" title="Clica pra ver mais detalhes" onClick={()=> 
+            <div aria-label={`${pais.country} | Clique pra ver mais detalhes do país`} tabIndex='0'
+             key={index} className="divFavor" title="Clica pra ver mais detalhes" onClick={()=> 
             naviget(`/detalhes/${pais.country}`)}>
 
                 <p >Nome: {pais.country}</p>

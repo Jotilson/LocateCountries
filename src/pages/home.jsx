@@ -70,11 +70,11 @@ function Home(){
            <p>ISO2: {paises.iso2}</p>
            <h3>Cidades</h3>
            <button className='btnFavorito' onClick={favoritar}>{favor}</button>
-           <ul>
+           <ol>
                {paises.cities.map((city)=>(
                <li key={city}>{city}</li>
                ))}
-           </ul>
+           </ol>
             </div>
           
           ))}

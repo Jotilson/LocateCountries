@@ -25,7 +25,7 @@ function Detalhes() {
       <h2>Nome: {pais.country}</h2>
       <h2>ISO2: {pais.iso2}</h2>
       <h2>ISO3: {pais.iso3}</h2>
-      <img className="Pick" src={`https://flagsapi.com/${pais.iso2}/flat/64.png`} alt="" />
+      <img className="Pick" src={`https://flagsapi.com/${pais.iso2}/flat/64.png`} alt={`BNADEIRA DE ${pais.country}`} />
  <br /><br />
       <div className="divDetails">
           <ol >
