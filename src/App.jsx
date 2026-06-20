@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import './App.css'
 import AppRoutes from './routes/appRoutes'
 import NavBar from './component/navBar';
@@ -10,9 +11,12 @@ const location=useLocation();
 
   return (
     <>
-    {location.pathname !== "/" && <NavBar/>}
+    <Suspense fallback={<p>Carregando...</p>}>
+       {location.pathname !== "/" && <NavBar/>}
 
     <AppRoutes/>
+    </Suspense>
+   
 
      
     </>

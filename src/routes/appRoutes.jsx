@@ -1,11 +1,13 @@
+import { lazy } from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Home from '../pages/home'
-import Lista from '../pages/lista'
-import Favorite from '../pages/favorite'
-import NavBar from '../component/navBar'
-import Detalhes from '../pages/detalhes'
-import Home2 from '../pages/home2'
-import NotFound from '../pages/notFound'
+const Home = lazy(()=> import('../pages/home'))
+const Lista =lazy(()=> import('../pages/lista'))
+const Favorite = lazy(()=> import('../pages/favorite'))
+const NavBar = lazy(()=> import('../component/navBar'))
+const Detalhes = lazy(()=> import('../pages/detalhes'))
+const Home2 = lazy(()=> import('../pages/home2'))
+const NotFound = lazy(()=> import('../pages/notFound'))
+
 
 function AppRoutes(){
   

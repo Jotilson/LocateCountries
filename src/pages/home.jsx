@@ -9,6 +9,7 @@ import { usePesquisa } from '../Hooks/pesquisa';
 import { usePais } from '../Hooks/pais';
 import { FavoritoContext } from '../context/favoritoContext';
 import { BtnTopo } from '../Hooks/buttonTopo';
+import { memo } from 'react';
 
 function Home(){
   const {dados}=useContext(DadosContext)
@@ -25,6 +26,7 @@ function Home(){
       country.country.toLowerCase()
     .includes(pesquisa.toLowerCase())
     )
+    
  if(filtrado.length>0 && pesquisa.trim()!==""){
   setPais(filtrado)
  }else{
@@ -86,4 +88,4 @@ function Home(){
     )
 }
 
-export default Home
+export default memo(Home)

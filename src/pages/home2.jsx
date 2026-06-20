@@ -1,5 +1,6 @@
+import { memo } from "react"
 import { useNavigate } from "react-router-dom"
-
+import './home.css'
 function Home2(){
     
 const navigate=useNavigate()
@@ -19,4 +20,4 @@ const navigate=useNavigate()
     )
 }
 
-export default Home2
+export default memo(Home2)

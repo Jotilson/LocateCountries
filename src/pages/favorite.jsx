@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { useContext } from "react"
 import {useNavigate} from "react-router-dom"
 import { FavoritoContext } from "../context/favoritoContext"
@@ -42,4 +43,4 @@ function clearList(){
     )
 }
 
-export default Favorite
+export default memo(Favorite)

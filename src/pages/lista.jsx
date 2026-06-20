@@ -1,7 +1,7 @@
+import { memo } from "react";
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { PaisContext } from "../context/paises";
-
 import './home.css'
 import { usePais } from "../Hooks/pais";
 import { FavoritoContext } from "../context/favoritoContext";
@@ -43,4 +43,4 @@ const navigate=useNavigate()
         </>
     )
 }
-export default Lista
+export default memo(Lista)
